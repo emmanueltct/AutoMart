@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AutoMart</title>
+  
+ <link href="../css/user_welcome.css" rel="stylesheet" type="text/css"> 
+  <script type="text/javascript" src="../js/buyer_newprice.js"></script>  
+</head>
+<body>
+
+  <div class="div_container">
+    <div class="div_header">
+      <div class="logo">
+        <img src="../image/index.jpg" alt="image logo">
+      </div>
+
+      <div class="title">
+        AutoMart
+      </div>
+
+      <div class="link">
+        
+        <ul>
+            <li><a href="index.html">Home</a></li>
+          <li><a href="purchase.html">Orders</a></li>
+            <li><a href="car.html">Publishe Car</a></li>
+             <li><a href="reset.html">My Account</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  <div class="div_car">
+      <div class="new_car" style="">
+        
+        <fieldset>
+                <legend><h3>Update price of purchase order for selected car</h3></legend>
+                  <form action="" method="post">
+                       <label for="buyer">Buyer</label>
+                      <input type="text" id="owner" name="owner" placeholder="Buyer Id....." readonly>
+
+                        <label for="car">Car Id</label>
+                      <input type="text" id="car" name="car" placeholder="Car........" readonly>
+
+                       <label for="old amount">old amount</label>
+                      <input type="text" id="car" name="old_amount" placeholder="Old proposed price" readonly>
+
+                      <label for="new_amount">new amount</label>
+                      <input type="text" id="amount" name="new_amount" placeholder="New proposed price......">
+                     
+                      <input type="submit" value="Update Price" onclick="return update_price()">
+                  </form>
+              </fieldset>
+
+    </div>
+ </div>
+      
+   <div class="div_rule">
+      <!-- this wiil dispaly some rule and regulation aboout the page and its use-->
+      with the AutoMart you can can post a car sale advertisement also you can buy car
+      and also upload <b style="color: red">Fraudulent car</b> are prohibitted.
+
+    </div>
+
+  </div>
+</body>
+</html>
