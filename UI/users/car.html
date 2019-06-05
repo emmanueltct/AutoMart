@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AutoMart</title>
+  <link href="../css/user_welcome.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="../js/car.js"></script>  
+</head>
+<body onload="car_option1()">
+
+  <div class="div_container">
+
+    <div class="div_header">
+      <div class="logo">
+        <img src="../image/index.jpg" alt="image log">
+      </div>
+
+      <div class="title">
+        AutoMart
+      </div>
+
+      <div class="link">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+               <li><a href="purchase.html">Orders</a></li>
+               <li><a href="car.html">Publishe Car</a></li>
+               <li><a href="reset.html">My Account</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        
+      </div>
+    </div>
+
+    <div class="div_car">
+    <!-- all about hte car will be here -->
+
+       <div class="new_car">
+         <!-- when the user change manufacturer the all the car will atomatically displayed here -->
+        <p><h3>use Car Publishe  filter option to perform different task on this page </h3></p>
+          <div id="publshe_form">
+             <fieldset>
+                <legend><h3>Publishe new car details</h3>  </legend>
+
+                  <form action="" method="post">
+                     <label for="owner">Car Owner</label>
+                    <input type="text" id="owner" name="owner" placeholder="Owner of Car.." readonly>
+
+                      <label for="created_date">Created_on</label>
+                    <input type="text" id="created_date" name="created_date" placeholder="Created Date..">
+
+                    <label for="manufacturer">Manufacturer</label>
+                    <input type="text" id="manufacturer" name="manufacturer" placeholder="Manufacturer of Car..">
+
+                    <label for="model">Model</label>
+                    <input type="text" id="model" name="model" placeholder="Model of Car..">
+
+                    <label for="body_type">Body_type</label>
+                    <input type="text" id="body_type" name="body_type" placeholder="Use of Car..">
+
+
+
+                     <label for="state">State of Car</label>
+                    <select id="state" name="state">
+                      <option selected disabled>state</option>
+                      <option value="new">New</option>
+                      <option value="used">Used</option>
+                    </select>
+                       <label for="price">price</label>
+                    <input type="text" id="price" name="price" placeholder="Price of Car..">
+
+                    <label for="Car Image">Car Image</label>
+                    <input type="file" id="image" name="image" placeholder="picture of..">
+                    <input type="submit" value="Submit" onclick="return car_advert()">
+                </form>
+            </fieldset>
+          </div>
+
+<!-- div for all unsold car advertised on your account -->
+
+          <div id="unsold_car">
+              
+               <div class="car_hold">
+                  <div class="car_image">
+                    <img src="../image/index3.jpg" id="index2" alt="car image"> 
+                  </div>
+
+                  <div class="car_creation">
+                       <p>
+                          Car Id:............<br><br>
+                          Price:............<br><br>
+                           Purchase state:...<b>Unsold</b>...<br><br>
+                          Created On:..../..../....<br><br>
+                          <a href="publishe_details.html">
+                            <button class="purchase">details</button>
+                          </a>
+                            <a href="car_advert.html">
+                            <button class="purchase" >Advertise</button>
+                          </a>
+                           <a href="car_orders.html">
+                            <button class="purchase" >Orders</button>
+                          </a>
+                      </p> 
+                  </div>
+                </div>
+
+
+                <div class="car_hold">
+                  <div class="car_image">
+                    <img src="../image/index2.jpg" id="index2" alt="car image"> 
+                  </div>
+
+                  <div class="car_creation">
+                       <p>
+                          Car Id:............<br><br>
+                          Price:............<br><br>
+                           Purchase state:...<b>Unsold</b>...<br><br>
+                          Created On:..../..../....<br><br>
+                          <a href="publishe_details.html">
+                            <button class="purchase">details</button>
+                          </a>
+                            <a href="car_advert.html">
+                            <button class="purchase" >Advertise</button>
+                          </a>
+                           <a href="car_orders.html">
+                            <button class="purchase" >Orders</button>
+                          </a>
+                      </p>  
+                  </div>
+                </div>
+
+
+            </div>
+
+       
+
+
+
+          <div id="sold_car">
+            
+               <div class="car_hold">
+                  <div class="car_image">
+                    <img src="../image/index3.jpg" id="index2" alt="car image"> 
+                  </div>
+
+                  <div class="car_creation">
+                        <p>
+                          Car Id:............<br><br>
+                          Price:............<br><br>
+                           Purchase state:...<b>Sold</b>...<br><br>
+                          Created On:..../..../....<br><br>
+                          <a href="sold_details.html">
+                            <button class="purchase">details</button>
+                          </a>
+                      </p>  
+                  </div>
+                </div>
+
+
+                <div class="car_hold">
+                  <div class="car_image">
+                    <img src="../image/index2.jpg" id="index2" alt="car image"> 
+                  </div>
+
+                  <div class="car_creation">
+                      <p>
+                          Car Id:............<br><br>
+                          Price:............<br><br>
+                           Purchase state:...<b>Sold</b>...<br><br>
+                          Created On:..../..../....<br><br>
+                          <a href="sold_details.html">
+                            <button class="purchase">details</button>
+                          </a>
+                      </p> 
+                  </div>
+                </div>
+
+          </div>
+
+
+
+
+        </div>
+     
+
+
+      <div class="car_advitise">
+        <h3>Car Publishe filter option</h3>
+            
+                 <label for="account"></label>
+                <select id="car_filter" name="car_filter" onchange="car_option2()">
+                  <option selected disabled>Car Publishe filter option</option>
+                  <option value="new">Publishe new car</option>
+                  <option value="unsold">Unsold published car</option>
+                  <option value="sold">Sold published Car</option>
+                </select>
+            
+              <br><br><br>
+            to update the car price just use car filter option then from the list of unsol car view detail of advertisement then update price<br><br><br>
+
+            to mark car as sold also use car filter option then view list of available car click on orders tosee all purchase order made to advertisement then confirm order'
+
+           <div class="div_meaning">
+            
+          <h1>Auto Mart</h1>
+              <p>
+                 Auto Mart is an online marketplace for automobiles of diverse makes, model or body type. With
+                 Auto Mart, users can sell their cars or buy from trusted dealerships or private sellers.
+              </p>
+            
+          </div>
+           
+        </div>
+
+
+      </div>
+      
+  
+
+    <div class="div_rule">
+      <!-- this wiil dispaly some rule and regulation aboout the page and its use-->
+      with the AutoMart you can can post a car sale advertisement also you can buy car
+      and also if you find <b style="color: red">Fraudulent </b>report it
+    </div>
+  </div>
+
+</body>
+</html>
