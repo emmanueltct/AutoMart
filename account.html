@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AutoMart</title>
+  <link href="css/project.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/account.js"></script>
+</head>
+<body>
+
+  <div class="div_container">
+    <div class="div_header">
+      <div class="logo">
+        <img src="image/index.jpg" alt="image logo">
+      </div>
+
+      <div class="title">
+        AutoMart
+      </div>
+
+      <div class="link">
+        
+        <ul>
+           <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="account.html">Sign Up</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </div>
+ 
+    <div class="div_car">
+            <div class="car_advitise">
+                    <fieldset>
+                      <legend>Setting up your AutoMart Account</legend>
+                        <form action="" id="account" method="post">
+                            <label for="Email">Email</label>
+                            <input type="text" id="email" name="email" placeholder="Your Email.." required>
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Your First tname.." required>
+
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Your Last name.." required>
+
+                            <label for="Password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Your Password.." required>
+
+                            <label for="account">Account type</label>
+                            <select id="acc_option" name="acc_option">
+                              <option selected disabled>Are you Admin?</option>
+                              <option value="yes">Yes</option>
+                              <option value="no">No</option>
+                            </select>
+
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" placeholder="Your Address.." required>
+
+                            
+                            <input type="submit" value="Submit" onclick="return myAccount()">
+                      </form>
+
+                 If you arleady have an account go  to <a href="login.html" style="color:blue">login page</a> 
+
+            </fieldset>
+        </div>
+
+          <div class="new_car">
+            <div class="div_meaning">  
+              <h1>Auto Mart</h1>
+                  <p>
+                     Auto Mart is an online marketplace for automobiles of diverse makes, model or body type. With
+                     Auto Mart, users can sell their cars or buy from trusted dealerships or private sellers.
+                  </p>     
+              </div>
+        </div>
+   </div>
+      
+    <div class="div_rule">
+      <!-- this wiil dispaly some rule and regulation aboout the page and its use-->
+      with the AutoMart you can post a car sale advertisement also you can buy car, please work with us through making         
+       <a href="account.html" style="color:blue">sign up</a> to AutoMart sytem
+
+    </div>
+ </div>
+</body>
+</html>
