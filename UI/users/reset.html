@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AutoMart</title>
+  
+<link href="../css/user_welcome.css" rel="stylesheet" type="text/css"> 
+  <script type="text/javascript" src="../js/reset.js"></script>  
+</head>
+<body>
+
+  <div class="div_container">
+    <div class="div_header">
+      <div class="logo">
+        <img src="../image/index.jpg" alt="logo image">
+      </div>
+
+      <div class="title">
+        AutoMart
+      </div>
+
+      
+      <div class="link">
+        
+        <ul>
+           <li><a href="index.html">Home</a></li>
+          <li><a href="purchase.html">Orders</a></li>
+            <li><a href="car.html">Publishe Car</a></li>
+             <li><a href="reset.html">My Account</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+ 
+    <div class="div_car">
+      <div class="car_advitise">
+             
+        <fieldset>
+                <legend>Change your account password</legend>
+                    <form action="" method="post">
+                      <label for="old">Email</label>
+                        <input type="text" id="email" name="email" placeholder="email.." readonly>
+                        <label for="old">Old Password</label>
+                        <input type="password" id="old_password" name="old_password" placeholder="old password.." required>
+                        <label for="Password">New Password</label>
+                        <input type="password" id="n_password" name="n_password" placeholder="New passsword " required>
+
+                         <label for="Confirm_password">Comfirm Password</label>
+                        <input type="password" id="c_password" name="c_password" placeholder="Comfirm passsword " required>
+                        <input type="submit" value="Submit" onclick="return reset_acc()">
+                    </form>
+              </fieldset>
+          </div>
+      </div>    
+   <div class="div_rule">
+      <!-- this wiil dispaly some rule and regulation aboout the page and its use-->
+      with the AutoMart you can can post a car sale advertisement also you can buy car
+      and also upload <b style="color: red">Fraudulent car</b> are prohibitted.
+
+    </div>
+
+  </div>
+
+</body>
+</html>

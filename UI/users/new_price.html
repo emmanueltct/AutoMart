@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AutoMart</title>
+  
+ <link href="../css/user_welcome.css" rel="stylesheet" type="text/css"> 
+  <script type="text/javascript" src="../js/new_price.js"></script>  
+</head>
+<body>
+
+  <div class="div_container">
+    <div class="div_header">
+      <div class="logo">
+        <img src="../image/index.jpg" alt="image logo">
+      </div>
+
+      <div class="title">
+        AutoMart
+      </div>
+
+      <div class="link">
+        
+        <ul>
+            <li><a href="index.html">Home</a></li>
+          <li><a href="purchase.html">Orders</a></li>
+            <li><a href="car.html">Publishe Car</a></li>
+             <li><a href="reset.html">My Account</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  <div class="div_car">
+      <div class="new_car" style="">
+        
+        <fieldset>
+                <legend><h2>Update price of advertised car</h2></legend>
+                  <form action="" method="post">
+                      
+
+                        <label for="car">Car Id</label>
+                      <input type="text" id="car" name="car" placeholder="Car Id........" readonly>
+
+                       <label for="old amount">old Price</label>
+                      <input type="text" id="car" name="old_amount" placeholder="Old price" readonly>
+
+                      <label for="new_amount">new price</label>
+                      <input type="text" id="amount" name="new_amount" placeholder="New  price......">
+                     
+                      <input type="submit" value="Update Price" onclick="return update_price()">
+                  </form>
+              </fieldset>
+
+    </div>
+ </div>
+      
+   <div class="div_rule">
+      <!-- this wiil dispaly some rule and regulation aboout the page and its use-->
+      with the AutoMart you can can post a car sale advertisement also you can buy car
+      and also upload <b style="color: red">Fraudulent car</b> are prohibitted.
+
+    </div>
+
+  </div>
+</body>
+</html>
