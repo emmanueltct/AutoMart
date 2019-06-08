@@ -1,0 +1,212 @@
+
+div.div_container{
+	box-sizing: border-box;
+	background-color:lightgrey;
+	padding-top:0%;
+	border-radius:5px;
+	font-size:15px;
+	font-family: "Times New Roman", Times, serif;
+
+}
+
+div.div_header{
+	background-color:#3c4b63;
+	padding-top:0%;
+	color: white;
+	display: inline-block;
+}
+
+
+div.logo{
+	overflow: hidden;
+	}
+
+div.title{
+	color:white;
+	font-weight: bold;font-size: 30px;
+	padding-left:0;
+	margin-left:0;
+}
+
+div.link{
+	display:inline-block;
+}
+
+div.link ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.link a {
+  text-decoration:none;
+  color:white;
+  font-size:25px;
+  
+}
+
+div.link a:hover {
+  background-color: #0099cc;
+}
+
+
+div.logo img{
+	width: 80%;
+	height: 80%;
+	border-radius:50%;
+	margin-top:0;
+	padding-top: 0;
+}
+
+
+div.div_meaning{
+	background-color:;
+	padding-top:0%;
+	color:black;
+	padding:1%;	
+}
+
+div.div_meaning h1{
+	color:blue;
+}
+
+div.div_car{
+	display: inline-block;
+	
+}
+
+div.car_advitise,div.new_car,div.logo,div.link,div.logo,div.title, div.link a,div.car_image,div.car_creation{
+	float: left;
+	padding:1%;
+
+}
+
+
+div.new_car {
+	background-color:white;
+	margin-left:2%;
+	border-radius:6px;
+}
+
+div.car_advitise {
+	background-color:white;
+	border-radius:6px;
+	 
+}
+
+
+div.car_hold{
+	width:100%;
+	display: inline-block;
+}
+
+
+
+div.car_image img{
+	width:100%;
+overflow: hidden;
+border-radius:50%
+}
+
+div.car_creation{
+	font-weight: bold;
+	 font-style: italic;
+	 color:blue; 
+	 vertical-align: middle;
+	  padding-top:2%;
+	}
+
+
+div.new_car img{
+	width: 100%;
+	 
+}
+
+.image_detail {
+width:100%;
+color:black;
+padding:3%;
+}
+
+.image_detail td{
+padding:3%;
+}
+.image_detail tr:hover {
+background-color: green;
+}
+
+div.div_rule{
+	background-color:#3c4b63;
+	padding:3%;
+	color:white;
+	border-radius:6px;
+}
+
+@media only screen and (min-width:600px) {
+	.div_meaning{width: 100%;}
+	.car_advitise{width: 37%; margin:3%;}
+	.title{width: 35%;}
+	.logo{width:10%;}
+	.link{width:40%;}
+	.link a{width:30%;}
+	.new_car{width: 50%;}
+	.div_header{width: 100%;}
+	.car_image{width:45%}
+	.car_creation{width:45%}
+	}
+
+
+@media only screen and (max-width:590px) {
+	.div_meaning{width: 100%;}
+	.car_advitise{width:92%; margin-right:3%;margin-left:3%; margin-top:3%;margin-bottom:3%}
+	.title{width: 100%;}
+	.logo{display:none}
+	.link{width:100%;}
+	.link a{width:80%;}
+	.new_car{width: 95%;margin:3%}
+	.div_header{width: 100%;}
+	
+
+
+}
+
+
+input[type=text], input[type=password], select {
+  width: 100%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius:4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+fieldset{
+  border-style: none;
+  color:black;
+  font-weight: bold;
+}
+
+legend{
+  text-align: center;
+  font-style: italic;
+  padding: 2%;
+  font-size:25px;
+  font-weight: bold;
+  color: blue;
+}
