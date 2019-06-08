@@ -1,0 +1,59 @@
+{
+  "name": "automart",
+  "version": "1.0.0",
+  "description": "Auto Mart is an online marketplace for automobiles of diverse makes",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/index.js",
+    "test": "mocha --require @babel/register 'src/**/**spec.js'",
+    "lint": "eslint 'src/**/*.js' --fix",
+    "format": "prettier-eslint 'src/**/*.{js,json}' --write"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "eslint --fix",
+      "prettier-eslint --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmanueltct/AutoMart.git"
+  },
+  "author": "Emmanuel MUNEZERO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emmanueltct/AutoMart/issues"
+  },
+  "homepage": "https://github.com/emmanueltct/AutoMart#readme",
+  "dependencies": {
+    "@hapi/joi": "^15.0.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-promise": "^4.1.1",
+    "husky": "^2.4.0",
+    "lint-staged": "^8.2.0",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.1",
+    "prettier-eslint-cli": "^4.7.1"
+  }
+}
