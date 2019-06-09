@@ -14,7 +14,7 @@ app.use('/api/v1/auth', user_router);
 app.use('/api/v1/auth/login', login_router);
 app.use('/api/v1/car', car_router);
 app.use('/api/v1/order',order_router);
-app.get('/', (req,res){
+app.get('/', (req,res)=>{
 	res.send('welcome to automart API End point');
 })
 
