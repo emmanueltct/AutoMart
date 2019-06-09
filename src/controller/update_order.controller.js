@@ -21,6 +21,7 @@ export const update_order=(req,res)=>{
         error:error.details[0].message
     });
     
+    
     order.amount=req.body.amount;
     const new_order=[{
         id:order_update.id,
