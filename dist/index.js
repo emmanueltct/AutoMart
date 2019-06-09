@@ -20,7 +20,7 @@ app.use('/api/v1/auth', _user["default"]);
 app.use('/api/v1/auth/login', _login["default"]);
 app.use('/api/v1/car', _car["default"]);
 app.use('/api/v1/order', _order["default"]);
-var port = 3300;
+var port = process.env.PORT || 3300;
 app.listen(port, function () {
   return console.log("server started correctly at port ".concat(port));
 });
