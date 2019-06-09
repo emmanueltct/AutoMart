@@ -20,13 +20,11 @@ export const update_price=(req,res)=>{
         error:error.details[0].message
     });
 
-    car_status=req.params.price;
-    const newcar_update=car.find(cars=>cars.ids===car_id && cars.status===car_price); 
-    //console.log(car_update);
-    newcar_update.price=req.body.price;
+    
+    car_update.price=req.body.price;
     return res.status(200).json({
         status:200,
-        data:newcar_update
+        data:car_update
     });
 
 }
