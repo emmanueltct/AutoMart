@@ -7,6 +7,7 @@ import bodyParser from 'body-parser';
 import { status_Updatevalidation} from '../validation/car.validation';
 
 export const update_status=(req,res)=>{
+
     const car_id=parseInt(req.params.id);
     const car_update=car.find(cars=>cars.id===car_id);
     if(!car_update)return res.status(400).json({
@@ -21,15 +22,15 @@ export const update_status=(req,res)=>{
         error:error.details[0].message
     });
 
-    car_status=req.params.status;
-    const tuscar_update_sta=car.find(cars=>cars.ids===car_id && cars.status===car_status); 
-    if(!car_update_sta)return res.status(400).json({
+ 
+   
+    if(!car_update.status!='available')return res.status(400).json({
         status:400,
-        error:'Id of car not found'
+        error:'this car is arleady marked'
     });
 
 
-    car_update_sta.status=req.body.status;
+    car_update.status=req.body.status;
      
     return res.status(200).json({
         status:200,
