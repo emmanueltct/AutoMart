@@ -12,6 +12,7 @@ const deletePosted = (req, res) => {
 
   }
 
+  
  const admin=req.user_token.user_token;
 console.log(admin.is_admin);
 
