@@ -10,18 +10,7 @@
     "lint": "eslint 'src/**/*.js' --fix",
     "format": "prettier-eslint 'src/**/*.{js,json}' --write"
   },
-  "lint-staged": {
-    "**/*.js": [
-      "eslint --fix",
-      "prettier-eslint --write",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/emmanueltct/AutoMart.git"
@@ -32,6 +21,9 @@
     "url": "https://github.com/emmanueltct/AutoMart/issues"
   },
   "homepage": "https://github.com/emmanueltct/AutoMart#readme",
+  "engines": {
+    "node": "10.15.3"
+  },
   "dependencies": {
     "@hapi/joi": "^15.0.3",
     "bcryptjs": "^2.4.3",
