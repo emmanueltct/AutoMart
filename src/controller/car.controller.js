@@ -17,7 +17,7 @@ export const createCar=(req,res)=>{
     const owner=user.find(exist=>exist.id===parseInt(req.body.owner));
  if(!owner)return res.status(400).json({
     status:400,
-    error:'email of this id not found you should create new account'
+    error:'car owner id  not found create new account or try your own id '
 });  
 
         const new_car={
