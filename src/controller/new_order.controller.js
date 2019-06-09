@@ -16,7 +16,7 @@ export const createOrder=(req,res)=>{
     if(!car_order)return res.status(400).json({status:200,error:'the car not found'});
 
     if(car_order.status!='available')return res.status(400).json({status:200,error:'the car not available is marked as sold'});
-
+    
     const new_order={
     id:order.length+1, 
     car_id:car_order.id,
@@ -27,7 +27,7 @@ export const createOrder=(req,res)=>{
     };
 
     order.push(new_order);
-    //console.log(new_order);
+    
     return  res.status(200).json({
         status:200,
         data:new_order
