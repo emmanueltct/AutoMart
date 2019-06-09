@@ -15,7 +15,7 @@ app.use('/api/v1/auth/login', login_router);
 app.use('/api/v1/car', car_router);
 app.use('/api/v1/order',order_router);
 
-const port=process.env.PORT||3200;
+const port=3300;
 app.listen(port,()=>console.log(`server started correctly at port ${port}` ));
 
 
