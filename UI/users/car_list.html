@@ -4,7 +4,18 @@
   <title>AutoMart</title>
   
  <link href="../css/user_welcome.css" rel="stylesheet" type="text/css"> 
-  <script type="text/javascript" src=""></script>  
+  <script type="text/javascript" src=""></script> 
+  <style type="text/css">
+    .car_hold{
+      display: flex;
+      flex-wrap: wrap;
+      background-color:white;
+      width:60%;
+    }
+    .car_image img{
+      width:100%;
+    }
+  </style>  
 </head>
 <body>
 
@@ -29,10 +40,12 @@
         </ul>
       </div>
     </div>
-  <div class="div_car">
-    <center>
-      <div class="new_car" style="float:none;">
-          <h3>The avialable list of unsold car you can purchase</h3>
+       
+      <div class="div_car" style="width: 100%; display:inline-block;">
+       <div class="row-flex" style=" display:flex;flex-direction:column;align-items: center;"> 
+        <h3>The avialable list of unsold car you can purchase</h3>
+         <i><b>click on details button and view car  information then buy </b></i><br><br>
+      <div class="" style="float:none;width:60%">
           <div class="car_hold">
           <div class="car_image">
             <img src="../image/photo-1449130015084-2d48a345ae62.jpg" id="index2" alt="car image"> 
@@ -90,7 +103,7 @@
         </div>
 
     </div>
-    </center>
+    </div>
  </div>
       
    <div class="div_rule">
