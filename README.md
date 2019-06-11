@@ -34,7 +34,7 @@ when you loged in as admin you can delete AD record just see the available recor
 	# 11. Admin can view all posted ads whether sold or unsold.
 On the admin welcome  page use menus and you can see all sold or unsold car
 
-# follow this link  https://emmanueltct.github.io/AutoMart/ 
+** follow this link  https://emmanueltct.github.io/AutoMart/UI **
 
 # API END POINTS
 
