@@ -14,7 +14,8 @@ export const getCar2=(req,res)=>{
     const max_p=req.query.max_price;
     const min_p=req.query.min_price;
 
-        if(c_status!='' && max_p==''){
+
+        if(typeof c_status!=="undefined" && typeof max_p==="undefined"){
 
                 const car_v= carStatus(req.query.status);
                 if(car_v.length>0){
@@ -30,7 +31,7 @@ export const getCar2=(req,res)=>{
             }
    
     }
-    else if(c_status!='' && max_p!=''){
+    else if(typeof c_status!=="undefined" && typeof max_p!=="undefined"){
 
                 const car_pr= carPriceRange(min_p,max_p,c_status);
                     if(car_pr.length>0){
@@ -45,9 +46,16 @@ export const getCar2=(req,res)=>{
                     })
                 }
 
+            }else{
+                return res.status(400).json({
+                    status:400,
+                    error:'you are not admin of this system only you allowed to see available unsold car'
+                });
             }
+            
 
 }
+
 
 
 
