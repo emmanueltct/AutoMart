@@ -36,7 +36,7 @@ export const  createUser=(req,res)=>{
                             first_name :req.body.first_name ,
                             last_name :req.body.last_name,
                             password :req.body.password ,
-                            address : req.body.password ,
+                            address : req.body.address ,
                             is_admin :req.body.is_admin
                         };
 
