@@ -8,6 +8,7 @@ the user visit automart sytem on the home page can view the latest advertised ca
 	# 1. User can sign up.
 	
 on the homepage click on signup page and fiil the form data then submit
+	
 	# 2. User can sign in.
 after making signup you can login into your account through homepage and click on login then fill the form and submit
 
