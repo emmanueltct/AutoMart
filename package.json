@@ -10,7 +10,6 @@
     "lint": "eslint 'src/**/*.js' --fix",
     "format": "prettier-eslint 'src/**/*.{js,json}' --write"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/emmanueltct/AutoMart.git"
@@ -47,7 +46,6 @@
     "husky": "^2.4.0",
     "lint-staged": "^8.2.0",
     "mocha": "^6.1.4",
-    
     "prettier-eslint-cli": "^4.7.1"
   }
 }

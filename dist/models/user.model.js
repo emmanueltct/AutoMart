@@ -15,6 +15,6 @@ var user = [{
   last_name: 'emmanuel',
   password: '12345',
   address: 'kgl',
-  is_admin: 'true'
+  is_admin: 'false'
 }];
 module.exports = user;
