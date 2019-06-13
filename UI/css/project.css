@@ -7,9 +7,8 @@ div.div_container{
 	border-radius:5px;
 	font-size:20px;
 	font-family: "Times New Roman", Times, serif;
-  background-image:url("../image/Capture.jpg");
-                  
-                      
+  background-image:url("../image/Capture.jpg");   
+
     background-repeat:no-repeat;
     background-size: cover;
     background-attachment:fixed;
