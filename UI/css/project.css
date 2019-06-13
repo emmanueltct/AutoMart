@@ -1,12 +1,21 @@
-
+body{
+  
+}
 div.div_container{
 	box-sizing: border-box;
-	background-color:lightgrey;
 	padding-top:0%;
 	border-radius:5px;
-	font-size:15px;
+	font-size:20px;
 	font-family: "Times New Roman", Times, serif;
-
+    background-image:    url(../image/Capture.jpg);
+                       /* <------ */
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+    background-blend-mode: lighten;
+    opacity:1;
+  
+   
 }
 
 div.div_header{
@@ -60,10 +69,11 @@ div.logo img{
 
 
 div.div_meaning{
-	background-color:;
+  color:black;
 	padding-top:0%;
-	color:black;
+	font-weight: bold;
 	padding:1%;	
+  overflow: wrap;
 }
 
 div.div_meaning h1{
@@ -142,6 +152,80 @@ div.div_rule{
 	border-radius:6px;
 }
 
+
+.car_container {  
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.preview{
+  flex: 36%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin:1%;
+box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.9);
+}
+
+.preview ul li{
+	padding: 3%;
+	font-family:verdana;
+}
+.car_list{
+  flex: 54%;
+
+  padding:1%;
+  margin:1%;
+  background:white;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.9);
+}
+
+div.div_rule{
+  background-color:#3c4b63;
+  padding:3%;
+  color:white;
+  border-radius:6px;
+}
+
+/* Footer */
+
+
+ .div_list {
+    display: flex;
+    flex-wrap: wrap;
+   
+   
+  }
+  .car_card {
+    margin: 1%;
+    width:30%;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  } 
+  .car_card img {
+    max-width: 100%;
+  }
+.text{
+  padding:2%
+}
+  .car_card button {
+    background: gray;
+    border: 0;
+    color: white;
+    padding-bottom: 4%;
+    width: 100%;
+    border-radius: 5px;
+    }
+
+.preview_card{
+  width: 100%
+}
+
+.preview_card img{
+	width:100%;
+}
+
 @media only screen and (min-width:600px) {
 	.div_meaning{width: 100%;}
 	.car_advitise{width: 37%; margin:3%;}
@@ -153,6 +237,9 @@ div.div_rule{
 	.div_header{width: 100%;}
 	.car_image{width:45%}
 	.car_creation{width:45%}
+
+
+
 	}
 
 
@@ -168,13 +255,27 @@ div.div_rule{
 	
 
 
+	.car_container, .div_list{   
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .car_list{
+  width:95%;
+  	margin:2%;
+  }
+  .car_card,.preview_card{
+    width: 90%;
+    margin:2%;
+  }
+
 }
 
 
 input[type=text], input[type=password], select {
   width: 100%;
-  padding: 10px 10px;
-  margin: 8px 0;
+  padding: 6px 6px;
+  margin: 5px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;

@@ -1,9 +1,10 @@
-import express  from 'express' ;
-const user_router=express.Router();
-import {createUser,getUser} from '../controller/user.controller.js';
+/* eslint-disable linebreak-style */
+/* eslint-disable camelcase */
+
+import express from 'express';
+import createUser from '../controller/user.controller';
+
+const user_router = express.Router();
 
 user_router.post('/signup', createUser);
-
-user_router.get('/signup', getUser);
-
-module.exports=user_router;
+export default user_router;

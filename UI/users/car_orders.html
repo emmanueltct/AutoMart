@@ -1,11 +1,21 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <title>AutoMart</title>
   
  <link href="../css/user_welcome.css" rel="stylesheet" type="text/css"> 
-  <script type="text/javascript" src=""></script>  
+  <script type="text/javascript" src=""></script> 
+  <style type="text/css">
+    .car_hold{
+      display: flex;
+      flex-wrap: wrap;
+      background-color:white;
+      width:60%;
+    }
+    .car_image img{
+      width:100%;
+    }
+  </style> 
 </head>
 <body>
 
@@ -22,96 +32,142 @@
       <div class="link">
         
         <ul>
-           <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
           <li><a href="purchase.html">Orders</a></li>
-            <li><a href="car.html">Publishe Car</a></li>
+            <li><a href="car.html">Publish Car</a></li>
              <li><a href="reset.html">My Account</a></li>
             <li><a href="logout.html">Logout</a></li>
         </ul>
       </div>
     </div>
-  <div class="div_car">
-  	<center>
-      <div class="new_car" style="float: none">
-          <h3>The avialable list of purcase orders on this car advertisement. You can Mark car by confirming purchase order</h3>
-          <div class="car_hold">
-		          <div class="car_image">
-		            <img src="../image/index.jpg" id="index2" alt="car image"> 
-		          </div>
+  
 
-		          <div class="car_creation">
-		            <p>
-		            Order Id:.......<br><br>
-		            Buyer Id:.......<br><br>
-		            Price offered:.......<br><br>
-		             Order date:..../.../....<br><br>
-		             Purchase State:<b style="color:black">Pending</b><br>
-		            </p>
-		              <a href="confirm.html">
-		                <button class="purchase" >Confirm</button>
-		              </a>
+    <div class="car_container">
+  
+  <div class="car_list">
+    <center><h2>the latest car you can purchase</h2></center> 
+      <div class="div_list">
+        <div class="car_card">
+        <img src="../image/index.jpg"  alt="Sample photo">
+          <div class="text">
+            
+            <p>
+              <ul>
+                <li>Buyer:MUNEZERO EMMANUEL</li>
+                <li>Oder  date:25-07-2018</li>
+                <li>Offered Price:300$</li>
+                <li>Offered Price:300$</li>
+                <li>Status:Pendind</li>
+                <li>status:available</li>
+              </ul>
+              
+            </p>
+               <a href="confirm.html"><button class="purchase" >Confirm</button></a>
 
-		         		<a href="new_price.html">
-                            <button class="purchase" >New Price</button>
-                          </a>
-		          </div>
-	        </div>
+                <a href="new_price.html"><button class="purchase" >New Price</button></a>
+          </div>
+          </div>
+
+          <div class="car_card">
+        <img src="../image/index.jpg"  alt="Sample photo">
+          <div class="text">
+            
+            <p>
+              <ul>
+                <li>Buyer:MUNEZERO EMMANUEL</li>
+                <li>Oder  date:25-07-2018</li>
+                <li>Posted Price:300$</li>
+                <li>Offered Price:220$</li>
+                <li>Status:Pendind</li>
+                <li>status:available</li>
+              </ul>
+              
+            </p>
+               <a href="confirm.html"><button class="purchase" >Confirm</button></a>
+
+                <a href="new_price.html"><button class="purchase" >New Price</button></a>
+          </div>
+          </div>
+
+        
+        <div class="car_card">
+        <img src="../image/index.jpg"  alt="Sample photo">
+          <div class="text">
+            
+            <p>
+              <ul>
+                <li>Buyer:UWAYO</li>
+                <li>Oder  date:25-07-2018</li>
+                <li>Posted Price:300$</li>
+                <li>Offered Price:300$</li>
+                <li>Status:Pendind</li>
+                <li>status:available</li>
+              </ul>
+              
+            </p>
+               <a href="confirm.html"><button class="purchase" >Confirm</button></a>
+
+                <a href="new_price.html"><button class="purchase" >New Price</button></a>
+          </div>
+          </div>
 
 
+        
+        <div class="car_card">
+        <img src="../image/index.jpg"  alt="Sample photo">
+          <div class="text">
+            
+            <p>
+              <ul>
+                <li>Buyer:MUNEZERO EMMANUEL</li>
+                <li>Oder  date:25-07-2018</li>
+                <li>Posted Price:300$</li>
+                <li>Offered Price:100$</li>
+                <li>Status:Pendind</li>
+                <li>status:available</li>
+              </ul>
+              
+            </p>
+               <a href="confirm.html"><button class="purchase" >Confirm</button></a>
 
-          <div class="car_hold">
-		          <div class="car_image">
-		            <img src="../image/index2.jpg" id="index2" alt="car image"> 
-		          </div>
+                <a href="new_price.html"><button class="purchase" >New Price</button></a>
+          </div>
+          </div>
 
-		          <div class="car_creation">
-		            <p>
-		            Order Id:.......<br><br>
-		            Buyer Id:.......<br><br>
-		            Price offered:.......<br><br>
-		             Order date:..../.../....<br><br>
-		             Purchase State:<b style="color:black">Pending</b><br>
-		            </p>
-		              <a href="confirm.html">
-		                <button class="purchase" >Confirm</button>
-		              </a>
-		              <a href="new_price.html">
-                            <button class="purchase" >New Price</button>
-                          </a>
-		          </div>
-	        </div>
+            <div class="car_card">
+        <img src="../image/index.jpg"  alt="Sample photo">
+          <div class="text">
+            
+            <p>
+              <ul>
+                <li>Buyer:KATO DENIS</li>
+                <li>Oder  date:25-07-2018</li>
+                <li>Posted Price:300$</li>
+                <li>Offered Price:200$</li>
+                <li>Status:Pendind</li>
+                <li>status:available</li>
+              </ul>
+              
+            </p>
+               <a href="confirm.html"><button class="purchase" >Confirm</button></a>
+
+                <a href="new_price.html"><button class="purchase" >New Price</button></a>
+          </div>
+          </div>
 
 
-
-         <div class="car_hold">
-		          <div class="car_image">
-		            <img src="../image/index3.jpg" id="index2" alt="car image"> 
-		          </div>
-
-		          <div class="car_creation">
-		            <p>
-		            Order Id:.......<br><br>
-		            Buyer Id:.......<br><br>
-		            Price offered:.......<br><br>
-		             Order date:..../.../....<br><br>
-		             Purchase State:<b style="color:black">Pending</b><br>
-		            </p>
-		              <a href="confirm.html">
-		                <button class="purchase" >Confirm</button>
-		              </a>
-		              <a href="new_price.html">
-                            <button class="purchase" >New Price</button>
-                          </a>
-		          </div>
-	        </div>
-
+        
+        
     </div>
-    </center>
+    </div>
+  </div>
+
+   
  </div>
       
    <div class="div_rule">
       <!-- this wiil dispaly some rule and regulation aboout the page and its use-->
-      with the AutoMart you can  post a car sale advertisement also you can buy car
+      with the AutoMart you can can post a car sale advertisement also you can buy car
       and also upload <b style="color: red">Fraudulent car</b> are prohibitted.
 
     </div>

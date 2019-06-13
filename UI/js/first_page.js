@@ -2,8 +2,8 @@
 function get_image(id_image){
 	
 //var image=document.getElementsById(id_image).getAttribute("src"); 
-var x = document.getElementById(id_image).src;
-//alert(x);
+var x = document.getElementById(id_image).id;
+
 var new_image = document.getElementById("new_car");
 
             while (new_image.hasChildNodes()) {
@@ -14,7 +14,7 @@ var new_image = document.getElementById("new_car");
 
 
     var newElement = document.createElement("img");
-   newElement.setAttribute("src",x);
+   newElement.setAttribute("src","image/"+x+".jpg");
    newElement.setAttribute("alt",'clicked car image');
     new_image.appendChild(newElement);
 

@@ -1,13 +1,22 @@
 
 div.div_container{
   box-sizing: border-box;
-  background-color:lightgrey;
+  
   padding-top:0%;
   border-radius:5px;
   font-size:15px;
   font-family: "Times New Roman", Times, serif;
-
+   background-image:    url(../image/Capture.jpg);
+                  
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+    background-blend-mode: lighten;
+    
 }
+  
+
+
 
 div.div_header{
   
@@ -70,10 +79,11 @@ div.div_meaning{
   padding-top:0%;
   color:black;
   padding:1%; 
+  font-weight: bold
 }
 
 div.div_meaning h1{
-  color:blue;
+  color:white;
 }
 
 div.div_car{
@@ -137,6 +147,85 @@ div.div_rule{
   border-radius: 5px;
 }
 
+
+.car_container {  
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: center;
+  color: white;
+}
+
+.preview{
+  flex: 36%;
+  margin:1%;
+color:black;
+font-weight:bold;
+font-size:20px;
+}
+
+.preview ul li{
+  padding: 3%;
+  font-family:verdana;
+}
+.car_list{
+  flex: 54%;
+
+  padding:1%;
+  margin:1%;
+
+  
+}
+
+div.div_rule{
+  background-color:#3c4b63;
+  padding:3%;
+  color:white;
+  border-radius:6px;
+}
+
+/* Footer */
+
+
+ .div_list {
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: center;   
+  }
+  .car_card {
+    margin: 1%;
+    width:30%;
+    background:white;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  } 
+  .car_card img {
+    max-width: 100%;
+  }
+.text{
+  padding:2%
+}
+  .car_card button {
+    background: gray;
+    border: 0;
+    color: white;
+    padding-bottom: 4%;
+    width: 100%;
+    border-radius: 5px;
+    }
+
+.preview_card{
+  width: 100%;
+  background:white;
+  padding: 3%;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
+
+.preview_card img{
+  width:100%;
+}
+
+
 @media only screen and (min-width:600px) {
   .div_meaning{width: 100%;}
   .car_advitise{width: 37%; margin-left:3%;
@@ -163,6 +252,21 @@ div.div_rule{
   .div_header{width: 100%;}
   
 
+  .car_container, .div_list{   
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .car_list{
+  width:95%;
+    margin:2%;
+  }
+  .car_card,.preview_card{
+    width: 90%;
+    margin:2%;
+  }
+
+
 }
 
 
@@ -181,8 +285,8 @@ input[type=submit] {
   width: 100%;
   background-color: #4CAF50;
   color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
+  padding: 10px 10px;
+  margin: 6px 0;
   border: none;
   border-radius:4px;
   cursor: pointer;
