@@ -2,8 +2,6 @@
 
 import order from '../models/order.model';
 import car from '../models/car.model';
-import express  from 'express' ;
-import bodyParser from 'body-parser';
 import {orderUpdatevalidation} from '../validation/order.validation';
 
 export const update_order=(req,res)=>{

@@ -7,6 +7,7 @@ import chai from 'chai';
 import chaiHttp from 'chai-http';
 import app from '../src/index';
 
+
 chai.use(chaiHttp);
 
 should = chai.should();
@@ -30,9 +31,9 @@ describe('user signup', () => {
         done();
       });
   });
-  it('user send inavild or empty email', (done) => {
+  it('user send invalid email', (done) => {
     const user = {
-      email: 'emmanuel10gmail.com',
+      email: 'emmanuel',
       first_name: 'munezero',
       last_name: 'emmanuel',
       password: '12345',
