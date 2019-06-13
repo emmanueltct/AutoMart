@@ -7,7 +7,10 @@ import signupvalidation from '../validation/user.validation';
 const createUser = (req, res) => {
   // input validation;
   const { error } = signupvalidation(req.body);
-  if (error) return res.status(400).send(error.details[0].message);
+  if (error) return res.status(400).json({
+    status:400,
+    error:error.details[0].message
+    });
 
   // checking existing user
   const user_token = {
@@ -15,7 +18,7 @@ const createUser = (req, res) => {
     email: req.body.email,
     first_name: req.body.first_name,
     last_name: req.body.last_name,
-    is_admin: 'false',
+    is_admin: 'false'
   };
 
   const new_email = req.body.email;
