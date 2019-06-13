@@ -12,7 +12,7 @@
     
     {
         id :1 ,
-        email:'emmanueel@gmail.com' ,
+        email:'emmanuel@gmail.com' ,
         first_name :'munezero' ,
         last_name : 'emmanuel',
         password : '12345' ,

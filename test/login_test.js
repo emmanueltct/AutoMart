@@ -12,7 +12,7 @@ chai.use(chaiHttp);
 describe('signin', () => {
   it('user should be able to signin', (done) => {
     const user = {
-      email: 'emmanueel@gmail.com',
+      email: 'emmanuel@gmail.com',
       password: '12345',
     };
     chai.request(app)
@@ -43,42 +43,10 @@ describe('signin', () => {
         done();
       });
   });
-  it('user not send empty email', (done) => {
-    const user = {
-      email: '',
-      password: '12345',
-    };
-    chai.request(app)
-      .post('/api/v1/auth/login')
-      .send(user)
-      .end((err, res) => {
-        res.should.have.status(400);
-        res.should.be.an('object');
-        res.body.should.have.property('error');
-        res.body.status.should.eql(400);
-        done();
-      });
-  });
   it('invalid password', (done) => {
     const user = {
       email: 'emmanuel@gmail.com',
       password: '1234566',
-    };
-    chai.request(app)
-      .post('/api/v1/auth/login')
-      .send(user)
-      .end((err, res) => {
-        res.should.have.status(400);
-        res.should.be.an('object');
-        res.body.should.have.property('error');
-        res.body.status.should.eql(400);
-        done();
-      });
-  });
-  it('sent empty password', (done) => {
-    const user = {
-      email: 'emmanuel@gmail.com',
-      password: '',
     };
     chai.request(app)
       .post('/api/v1/auth/login')
