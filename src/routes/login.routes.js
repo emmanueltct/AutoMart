@@ -1,7 +1,13 @@
-import express  from 'express' ;
+/* eslint-disable import/no-named-as-default */
+/* eslint-disable space-infix-ops */
+/* eslint-disable linebreak-style */
+/* eslint-disable camelcase */
+
+import express from 'express';
+import userLogin from '../controller/login.controller';
+
 const login_router=express.Router();
-import {userLogin} from '../controller/login.controller.js';
 
-login_router.post('/',userLogin);
+login_router.post('/', userLogin);
 
-module.exports=login_router;
+export default login_router;

@@ -60,4 +60,4 @@ var userLogin = function userLogin(req, res) {
   });
 };
 
-exports.userLogin = userLogin;
+export default userLogins;

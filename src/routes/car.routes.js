@@ -11,9 +11,9 @@ import deletePosted from '../controller/admin_delete.controller'
 import {getCar} from '../controller/admin_view.controller';
 import {getCar2} from '../controller/car_view.controller';
 
-car_router .post('/',auth, createCar);
+car_router.post('/',auth, createCar);
 
-car_router .get('/',auth, getCar,getCar2);
+car_router.get('/',auth, getCar,getCar2);
 
 car_router.get('/:id/',auth,singleCar);
 car_router.patch('/:id/status',auth,update_status);

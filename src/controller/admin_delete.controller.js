@@ -14,7 +14,7 @@ const deletePosted = (req, res) => {
 
   
  const admin=req.user_token.user_token;
-console.log(admin.is_admin);
+//console.log(admin.is_admin);
 
  if(admin.is_admin=='true'){
     const index = car.indexOf(post);
