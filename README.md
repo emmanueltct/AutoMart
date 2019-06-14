@@ -81,3 +81,51 @@ On the admin welcome  page use menus and you can see all sold or unsold car
 	# Admin can view all posted ads whether sold or unsold
 	GET: http://localhost:3300/api/v1/car
 
+Technologies used
+Language
+*Javascript*
+Server Environment
+ *NodeJS* 
+Framework
+ *Express* 
+Testing Framework
+ *Mocha chai *
+
+Continuous Integration
+Travis CI
+
+Test Coverage
+nyc
+
+Git badge
+
+coveralls
+
+Deployment
+Heroku
+
+Prerequisites
+ [Node Package Installer - NPM].
+
+Installation
+Step 1: Clone repo from github and change
+
+git clone  https://github.com/emmanueltct/AutoMart.git
+
+Step 2: Change directories to the new ~/AutoMart directory:
+
+cd AutoMart/
+
+Step 3: Install all required npm dependencies
+
+npm install
+
+Step 4: Start the server
+
+
+
+Contributor
+MUNEZERO Emmanuel
+
+License
+ISC © MUNEZERO Emmanuel
