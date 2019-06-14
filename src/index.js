@@ -27,5 +27,5 @@ app.get('/', (req, res) => {
 
 const newLocal = 3300;
 const port = process.env.PORT || newLocal;
-app.listen(port);
+app.listen(port,()=>console.log(`server started on${port}`));
 export default app;

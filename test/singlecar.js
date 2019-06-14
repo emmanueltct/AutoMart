@@ -28,4 +28,25 @@ describe('Viewing single car', () => {
         done();
       });
   });
+
+  it('if car id not exist', (done) => {
+    const user_token = {
+        id:1 ,
+        email:"emmanuelmunezero@gmail.com",
+        first_name:"munezero",
+        last_name:"emmanuel",
+        is_admin: 'false',
+      };
+
+      const token =jwt.sign({ user_token }, 'scretkey');
+      chai.request(app)
+      .get('/api/v1/car/900')
+      .set('x-auth-token', token)
+      .end((err, res) => {
+        res.should.have.status(400);
+        res.should.be.an('object');
+        res.body.should.have.property('error');
+        done();
+      });
+  });
 });

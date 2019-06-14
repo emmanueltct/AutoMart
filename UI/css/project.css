@@ -7,15 +7,14 @@ div.div_container{
 	border-radius:5px;
 	font-size:20px;
 	font-family: "Times New Roman", Times, serif;
-  background-image:url("../image/Capture.jpg");   
+ 
 
     background-repeat:no-repeat;
     background-size: cover;
     background-attachment:fixed;
     background-blend-mode: lighten;
-    opacity:1;
-  
-   
+    opacity:1;  
+     background-color:#edf0f4;
 }
 
 div.div_header{
@@ -162,10 +161,10 @@ div.div_rule{
 
 .preview{
   flex: 36%;
-  background-color: #f1f1f1;
+  
   padding: 20px;
   margin:1%;
-box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.9);
+
 }
 
 .preview ul li{
@@ -177,9 +176,8 @@ box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.9);
 
   padding:1%;
   margin:1%;
-  background:white;
-  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.9);
-}
+
+ }
 
 div.div_rule{
   background-color:#3c4b63;
@@ -198,13 +196,16 @@ div.div_rule{
    
   }
   .car_card {
-    margin: 1%;
-    width:30%;
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    margin: 2%;
+    padding:2%;
+    width:40%;
+     border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+   
   } 
   .car_card img {
     max-width: 100%;
+
   }
 .text{
   padding:2%
@@ -219,7 +220,9 @@ div.div_rule{
     }
 
 .preview_card{
-  width: 100%
+  width: 100%;
+   border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
 }
 
 .preview_card img{
