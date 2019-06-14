@@ -12,12 +12,11 @@ chai.use(chaiHttp);
 chai.should();
 chai.use(chaiHttp);
 
-describe('oreders update price', () => {
-  it('user can make order request', (done) => {
-    const order = {
-   
-      amount: 3000,
+describe('car update status', () => {
 
+  it('it shoult update the status value of car', (done) => {
+    const car = {
+      status:'sold',
     };
 
     const user_token = {
@@ -29,60 +28,9 @@ describe('oreders update price', () => {
     };
     const token =jwt.sign({ user_token }, 'scretkey');
     chai.request(app)
-    .patch('/api/v1/order/1/price')
+    .patch('/api/v1/car/2/status')
       .set('x-auth-token', token)
-      .send(order)
-      .end((err, res) => {
-        res.should.have.status(200);
-        res.should.be.an('object');
-        res.body.should.have.property('data');
-        res.body.status.should.eql(200);
-        done();
-      });
-  });
-
-  
-  it('when status not pending', (done) => {
-    const order = {
-      amount: 3000,
-    };
-    const user_token = {
-      id:1 ,
-      email:"emmanuelmunezero@gmail.com",
-      first_name:"munezero",
-      last_name:"emmanuel",
-      is_admin: 'false',
-    };
-    const token =jwt.sign({ user_token }, 'scretkey');
-    chai.request(app)
-    .patch('/api/v1/order/3/price')
-      .set('x-auth-token', token)
-      .send(order)
-      .end((err, res) => {
-        res.should.have.status(400);
-        res.should.be.an('object');
-        res.body.should.have.property('error');
-        
-        done();
-      });
-    });
-
-  it('when order id not exist', (done) => {
-    const order = {
-      amount:'40800',
-    };
-    const user_token = {
-      id:1 ,
-      email:"emmanuelmunezero@gmail.com",
-      first_name:"munezero",
-      last_name:"emmanuel",
-      is_admin: 'false',
-    };
-    const token =jwt.sign({ user_token }, 'scretkey');
-    chai.request(app)
-    .patch('/api/v1/order/19/price')
-      .set('x-auth-token', token)
-      .send(order)
+      .send(car)
       .end((err, res) => {
         res.should.have.status(400);
         res.should.be.an('object');
@@ -91,12 +39,14 @@ describe('oreders update price', () => {
         done();
       });
   });
-  
-  
-  it('when user send invalid number', (done) => {
-    const order = {
-      amount:'',
+
+
+
+  it('when user send invalid value to status', (done) => {
+    const car = {
+      status:1233345,
     };
+
     const user_token = {
       id:1 ,
       email:"emmanuelmunezero@gmail.com",
@@ -106,9 +56,9 @@ describe('oreders update price', () => {
     };
     const token =jwt.sign({ user_token }, 'scretkey');
     chai.request(app)
-    .patch('/api/v1/order/1/price')
+    .patch('/api/v1/car/1/status')
       .set('x-auth-token', token)
-      .send(order)
+      .send(car)
       .end((err, res) => {
         res.should.have.status(400);
         res.should.be.an('object');
@@ -117,4 +67,60 @@ describe('oreders update price', () => {
         done();
       });
   });
+
+  it('when the status not available', (done) => {
+    const car = {
+      status:'sold',
+    };
+
+    const user_token = {
+      id:1 ,
+      email:"emmanuelmunezero@gmail.com",
+      first_name:"munezero",
+      last_name:"emmanuel",
+      is_admin: 'false',
+    };
+    const token =jwt.sign({ user_token }, 'scretkey');
+    chai.request(app)
+    .patch('/api/v1/car/4/status')
+      .set('x-auth-token', token)
+      .send(car)
+      .end((err, res) => {
+        res.should.have.status(400);
+        res.should.be.an('object');
+        res.body.should.have.property('error');
+       
+        done();
+      });
+  });
+
+  it('when car not available', (done) => {
+    const car = {
+      status:'sold',
+    };
+
+    const user_token = {
+      id:1 ,
+      email:"emmanuelmunezero@gmail.com",
+      first_name:"munezero",
+      last_name:"emmanuel",
+      is_admin: 'false',
+    };
+    const token =jwt.sign({ user_token }, 'scretkey');
+    chai.request(app)
+    .patch('/api/v1/car/190/status')
+      .set('x-auth-token', token)
+      .send(car)
+      .end((err, res) => {
+        res.should.have.status(400);
+        res.should.be.an('object');
+        res.body.should.have.property('error');
+       
+        done();
+      });
+  });
+
+
+
 });
+
