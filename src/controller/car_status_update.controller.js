@@ -22,20 +22,17 @@ export const update_status=(req,res)=>{
         error:error.details[0].message
     });
 
- 
-   
+
     if(!car_update.status!='available')return res.status(400).json({
         status:400,
         error:'this car is arleady marked'
     });
 
-
-    car_update.status=req.body.status;
-     
-    return res.status(200).json({
+    if(req.body.status==='available'){
+        car_update.status=req.body.status;
+        return res.status(200).json({
         status:200,
         data:car_update
     });
-
 }
-
+}
