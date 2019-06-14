@@ -6,7 +6,7 @@ import bodyParser from 'body-parser';
 
 import {createvalidation } from '../validation/car.validation';
 
-export const createCar=(req,res)=>{
+ const createCar=(req,res)=>{
 
     const {error}=createvalidation (req.body);
     if(error) return res.status(400).json({
@@ -39,3 +39,5 @@ export const createCar=(req,res)=>{
         data:new_car
     });
 }
+
+export default createCar;

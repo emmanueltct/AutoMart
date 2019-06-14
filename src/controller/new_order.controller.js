@@ -9,13 +9,15 @@ import {ordervalidation } from '../validation/order.validation';
 export const createOrder=(req,res)=>{
 
     const {error}=ordervalidation (req.body);
-    if(error) return res.status(400).send(error.details[0].message);
+    if(error) return res.status(400).json({
+        status:400,
+        error:error.details[0].message});
 
     const car_id=parseInt(req.body.car_id);
     const car_order=car.find(cars=>cars.id===car_id);
-    if(!car_order)return res.status(400).json({status:200,error:'the car not found'});
+    if(!car_order)return res.status(400).json({status:400,error:'the car not found'});
 
-    if(car_order.status!='available')return res.status(400).json({status:200,error:'the car not available is marked as sold'});
+    if(car_order.status!='available')return res.status(400).json({status:400,error:'the car not available is marked as sold'});
     
     const new_order={
     id:order.length+1, 
