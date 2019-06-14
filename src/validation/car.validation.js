@@ -3,7 +3,6 @@ import Joi from '@hapi/joi';
 function createvalidation (data){
     const  carschema ={
             owner :Joi.number().integer().required(),
-           
             state:Joi.string().min(2).required(),
             status :Joi.string().required().default('available'),
             price :Joi.number().required(),

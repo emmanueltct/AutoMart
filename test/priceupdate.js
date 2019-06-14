@@ -1,4 +1,5 @@
 
+
 import { describe, it } from 'mocha';
 import chai from 'chai';
 import chaiHttp from 'chai-http';
@@ -8,13 +9,15 @@ import app from '../src/index';
 chai.should();
 chai.use(chaiHttp);
 
-describe('Request orders', () => {
-  it('user can make order request', (done) => {
-    const order = {
-      buyer: 1,
-      car_id: 1,
-      amount: 3000,
-      status: 'Pending',
+chai.should();
+chai.use(chaiHttp);
+
+describe('car Ad update price', () => {
+  it('user can make Advertisement price', (done) => {
+    const car = {
+   
+        price: 3000,
+
     };
 
     const user_token = {
@@ -26,9 +29,9 @@ describe('Request orders', () => {
     };
     const token =jwt.sign({ user_token }, 'scretkey');
     chai.request(app)
-      .post('/api/v1/order')
+    .patch('/api/v1/car/1/price')
       .set('x-auth-token', token)
-      .send(order)
+      .send(car)
       .end((err, res) => {
         res.should.have.status(200);
         res.should.be.an('object');
@@ -39,12 +42,11 @@ describe('Request orders', () => {
   });
 
 
-  it('user pass invalid data', (done) => {
-    const order = {
-      buyer:1,
-      car_id:'1sff',
-      amount:'3000',
-      status: 'Pending',
+  it('user send invalid data', (done) => {
+    const car= {
+ 
+        price:'jjjjjjj',
+     
     };
 
     const user_token = {
@@ -56,9 +58,9 @@ describe('Request orders', () => {
     };
     const token =jwt.sign({ user_token }, 'scretkey');
     chai.request(app)
-      .post('/api/v1/order')
+    .patch('/api/v1/car/1/price')
       .set('x-auth-token', token)
-      .send(order)
+      .send(car)
       .end((err, res) => {
         res.should.have.status(400);
         res.should.be.an('object');
@@ -67,8 +69,4 @@ describe('Request orders', () => {
         done();
       });
   });
-
-
-
-
 });

@@ -2,7 +2,7 @@
 import express  from 'express' ;
 const car_router =express.Router();
 import {auth} from '../middleware/authmiddleware'; 
-import {createCar} from '../controller/car.controller.js';
+import createCar from '../controller/car.controller';
 
 import {update_status} from '../controller/car_status_update.controller.js';
 import {update_price} from '../controller/car_price_update.controllerr';
