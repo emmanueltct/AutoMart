@@ -14,7 +14,7 @@ on the homepage click on signup  and fiil the form data then submit
 	# 2. User can sign in.
 after making signup you can login into your account through homepage and click on login then fill the form and submit just fill any valid email and any password
 
-	# 3. User (seller) can post a car sale advertisement.
+	### 3. User (seller) can post a car sale advertisement.
 after making login on user welcome page  click on publish car and fiil the form data then submit
 
 	# 4. User (buyer) can make a purchase order.
