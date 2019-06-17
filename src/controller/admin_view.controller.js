@@ -7,6 +7,7 @@ import bodyParser from 'body-parser';
 
 
 export const getCar=(req,res, next)=>{
+
     const admin=req.user_token.user_token;
     if (admin.is_admin == 'true') {
         if (car.length > 0) {
@@ -29,14 +30,18 @@ export const getCar=(req,res, next)=>{
     const c_status=req.query.status;
     const max_p=req.query.max_price;
     const min_p=req.query.min_price;
+    const state=req.query.state;
+    const manufacturer=req.query.manufacturer;
+    const bodytype=req.query.body_type;
 
+      
 
-if(typeof c_status!=="undefined" && typeof max_p==="undefined" && min_p==="undefined"){
+if(c_status=="available" && !max_p && !min_p && !state &&!manufacturer && !bodytype){
 const car_av=car.filter(c=>c.status==c_status);
- if(car_v.length>0){
+ if(car_av.length>0){
         res.status(200).json({
         status:200,
-        data:car_v
+        data:car_av
     })
     }else{
         res.status(400).json({
@@ -47,7 +52,7 @@ const car_av=car.filter(c=>c.status==c_status);
    
 }
     
-else if(typeof c_status!=="undefined" && typeof max_p!=="undefined" && min_p!=="undefined"){
+else if(c_status=="available" && max_p && min_p && !state &&!manufacturer && !bodytype){
 
     const car_pr=car.filter(c=>c.status==c_status && c.price>=min_p && c.price<=max_p);
   
@@ -63,17 +68,67 @@ else if(typeof c_status!=="undefined" && typeof max_p!=="undefined" && min_p!=="
             error:'no car with this price range found'
             })
         }
-}else{
+}else if(c_status=="available" && state && !max_p && !min_p &&!manufacturer && !bodytype ){
+
+    const car_state=car.filter(c=>c.status==c_status && c.state==state);
+  
+        if(car_state.length>0){
+            res.status(200).json({
+                status:200,
+                data:car_state
+                    })
+
+        }else{
+            res.status(400).json({
+            status:400,
+            error:'no car with this state '
+            })
+        }
+}
+
+else if(c_status=="available" && manufacturer && !max_p && !min_p && !state  && !bodytype ){
+
+    const car_state=car.filter(c=>c.status==c_status && c.manufacturer==manufacturer);
+  
+        if(car_state.length>0){
+            res.status(200).json({
+                status:200,
+                data:car_state
+                    })
+
+        }else{
+            res.status(400).json({
+            status:400,
+            error:'no car found for this manufacturer'
+            })
+        }
+}
+else if(bodytype &&!c_status && manufacturer && !max_p && !min_p && !state ){
+
+    const car_bodytype=car.filter(c=>c.body_type==bodytype);
+  
+        if(car_bodytype.length>0){
+            res.status(200).json({
+                status:200,
+                data:car_state
+                    })
+
+        }else{
+            res.status(400).json({
+            status:400,
+            error:'no car found for this body type'
+            })
+        }
+}
+
+
+else{
     return res.status(400).json({
         status:400,
-        error:'you are not admin of this system only you allowed to see available unsold car'
+        error:'no result found use correct keywords'
     });
     }
             
-
-
-
-
     }
 }
 
