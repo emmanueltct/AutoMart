@@ -1,8 +1,4 @@
-[![Build Status](https://travis-ci.org/emmanueltct/AutoMart.svg?branch=develop)](https://travis-ci.org/emmanueltct/AutoMart)  
-
-[![Coverage Status](https://coveralls.io/repos/github/emmanueltct/AutoMart/badge.svg?branch=develop)](https://coveralls.io/github/emmanueltct/AutoMart?branch=develop) 
-
- [![Maintainability](https://api.codeclimate.com/v1/badges/9e4542a98921206d571f/maintainability)](https://codeclimate.com/github/emmanueltct/AutoMart/maintainability)
+[![Build Status](https://travis-ci.org/emmanueltct/AutoMart.svg?branch=develop)](https://travis-ci.org/emmanueltct/AutoMart)  [![Coverage Status](https://coveralls.io/repos/github/emmanueltct/AutoMart/badge.svg?branch=develop)](https://coveralls.io/github/emmanueltct/AutoMart?branch=develop)	[![Maintainability](https://api.codeclimate.com/v1/badges/9e4542a98921206d571f/maintainability)](https://codeclimate.com/github/emmanueltct/AutoMart/maintainability)
 
 
 # AutoMart
