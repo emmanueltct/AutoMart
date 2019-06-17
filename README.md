@@ -25,6 +25,7 @@ after making login on user welcome page use filter option to see available car t
 	# 5. User (buyer) can update the price of his/her purchase order.
 on user welcome page click on orders you find list of orders request you have sent and click on new price button of any cary order you want to modify and fill the form then submit 
 
+
 	# 6. User (seller) can mark his/her posted AD as sold.
 on user welcome page click on publishe car you will find the list of car Ad you made and and click on orders button to see which order request have done on specific car then you can mark car as sold by confirming one order request
 
