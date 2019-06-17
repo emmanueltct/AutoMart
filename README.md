@@ -1,6 +1,9 @@
-[![Build Status](https://travis-ci.org/emmanueltct/AutoMart.svg?branch=develop)](https://travis-ci.org/emmanueltct/AutoMart) 
-[![Coverage Status](https://coveralls.io/repos/github/emmanueltct/AutoMart/badge.svg?branch=develop)](https://coveralls.io/github/emmanueltct/AutoMart?branch=develop)
-[![Maintainability](https://api.codeclimate.com/v1/badges/9e4542a98921206d571f/maintainability)](https://codeclimate.com/github/emmanueltct/AutoMart/maintainability)
+[![Build Status](https://travis-ci.org/emmanueltct/AutoMart.svg?branch=develop)](https://travis-ci.org/emmanueltct/AutoMart)  
+
+[![Coverage Status](https://coveralls.io/repos/github/emmanueltct/AutoMart/badge.svg?branch=develop)](https://coveralls.io/github/emmanueltct/AutoMart?branch=develop) 
+
+ [![Maintainability](https://api.codeclimate.com/v1/badges/9e4542a98921206d571f/maintainability)](https://codeclimate.com/github/emmanueltct/AutoMart/maintainability)
+
 
 # AutoMart
 Auto Mart is an online marketplace for automobiles of diverse makes, model or body type. With
@@ -24,7 +27,6 @@ after making login on user welcome page use filter option to see available car t
 
 	# 5. User (buyer) can update the price of his/her purchase order.
 on user welcome page click on orders you find list of orders request you have sent and click on new price button of any cary order you want to modify and fill the form then submit 
-
 
 	# 6. User (seller) can mark his/her posted AD as sold.
 on user welcome page click on publishe car you will find the list of car Ad you made and and click on orders button to see which order request have done on specific car then you can mark car as sold by confirming one order request
@@ -131,4 +133,4 @@ Contributor
 MUNEZERO Emmanuel
 
 License
-ISC Â© MUNEZERO Emmanuel
+ISC © MUNEZERO Emmanuel
