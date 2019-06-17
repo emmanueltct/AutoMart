@@ -86,40 +86,6 @@ else if(c_status=="available" && max_p && min_p && !state &&!manufacturer && !bo
         }
 }
 
-else if(c_status=="available" && manufacturer && !max_p && !min_p && !state  && !bodytype ){
-
-    const car_state=car.filter(c=>c.status==c_status && c.manufacturer==manufacturer);
-  
-        if(car_state.length>0){
-            res.status(200).json({
-                status:200,
-                data:car_state
-                    })
-
-        }else{
-            res.status(400).json({
-            status:400,
-            error:'no car found for this manufacturer'
-            })
-        }
-}
-else if(bodytype &&!c_status && manufacturer && !max_p && !min_p && !state ){
-
-    const car_bodytype=car.filter(c=>c.body_type==bodytype);
-  
-        if(car_bodytype.length>0){
-            res.status(200).json({
-                status:200,
-                data:car_state
-                    })
-
-        }else{
-            res.status(400).json({
-            status:400,
-            error:'no car found for this body type'
-            })
-        }
-}
 
 
 else{
